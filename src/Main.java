@@ -5,18 +5,26 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-       double precoUnd, qtC, dinheiro, troco;
+       String nome;
+       double salarioHora, salario;
+       int qtHorasTrab;
        
       
-       double r, area;
+       System.out.println("Nome");
+       nome = sc.nextLine();
+       System.out.println("Valor por hora");
+       salarioHora = sc.nextDouble();
+       System.out.println("Horas trabalhadas:");
+       qtHorasTrab = sc.nextInt();
+       salario = salarioHora * qtHorasTrab;
        
-       System.out.println("Digite o valor do raio do circulo");
-       r = sc.nextDouble();
+       System.out.printf("O pagamento para %s deve ser %.2f%n", nome, salario);
        
-       area = Math.PI * (r * r);
        
-       System.out.println(area);
-
+       
+       
+       
+       
 		sc.close();
 
 	}
