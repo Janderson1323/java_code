@@ -7,21 +7,15 @@ public class Main {
 
        double precoUnd, qtC, dinheiro, troco;
        
-       System.out.println("Preço unitário do produto");
-       precoUnd = sc.nextDouble();
+      
+       double r, area;
        
-       System.out.println("Quantidade comprada");
-       qtC = sc.nextDouble();
+       System.out.println("Digite o valor do raio do circulo");
+       r = sc.nextDouble();
        
-       System.out.println("Dinheiro recebido");
-       dinheiro = sc.nextDouble();
+       area = Math.PI * (r * r);
        
-       troco = dinheiro - (qtC * precoUnd);
-       
-       System.out.printf("Troco = %.2f%n", troco);
-       
-       
-       
+       System.out.println(area);
 
 		sc.close();
 
