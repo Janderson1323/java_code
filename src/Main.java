@@ -5,26 +5,17 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-       String nome;
-       double salarioHora, salario;
-       int qtHorasTrab;
-       
-      
-       System.out.println("Nome");
-       nome = sc.nextLine();
-       System.out.println("Valor por hora");
-       salarioHora = sc.nextDouble();
-       System.out.println("Horas trabalhadas:");
-       qtHorasTrab = sc.nextInt();
-       salario = salarioHora * qtHorasTrab;
-       
-       System.out.printf("O pagamento para %s deve ser %.2f%n", nome, salario);
-       
-       
-       
-       
-       
-       
+		double distancia, combustivel, consumo;
+
+		System.out.println("Distancia percorrida");
+		distancia = sc.nextDouble();
+		System.out.println("Combustível gasto");
+		combustivel = sc.nextDouble();
+
+		consumo = distancia / combustivel;
+
+		System.out.printf("Consumo medio %.3f%n", consumo);
+
 		sc.close();
 
 	}
