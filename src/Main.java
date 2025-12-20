@@ -7,28 +7,22 @@ public class Main {
 		
 		
 		
-		
-	double a, b, c, areaQuad, areaTriang, areaTrapez;
+	double duracao, segundos, horas, min, seg, resto;
 	
+	System.out.println("Digite a duracao em segundos: ");
+	duracao = sc.nextInt();
 	
-	System.out.println("Digite a medida A: ");
-	a = sc.nextDouble();
+	resto = duracao % 3600;
 	
-	System.out.println("Digite a medida A: ");
-	b = sc.nextDouble();
+	horas = duracao / 3600;
+	min = resto / 60;
+	seg = resto % 60;
 	
+	System.out.println(horas);
+	System.out.println(min);
+	System.out.println(seg);
+	System.out.println();
 	
-	System.out.println("Digite a medida A: ");
-	c = sc.nextDouble();
-	
-	
-	areaQuad = a * a;
-	areaTriang = a * b / 2;
-	areaTrapez = ((a + b) * c) / 2;
-	
-	System.out.println(areaQuad);
-	System.out.println(areaTriang);
-	System.out.println(areaTrapez);
 
 	sc.close();
 
