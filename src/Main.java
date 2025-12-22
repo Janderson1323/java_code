@@ -7,26 +7,30 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double plano, custoExtra, conta;
-		int minContrato, minUsado;
+		double precoUnd, dinheiroRec, troco, total;
+		int qtComp;
 
-		custoExtra = 2.00;
-		plano = 50.00;
-		minContrato = 100;
+		System.out.println("Preço unitário do produto:");
+		precoUnd = sc.nextDouble();
 
-		System.out.printf("Digite a quantidade de minutos:");
-		minUsado = sc.nextInt();
+		System.out.println("Quantidade comprada:");
+		qtComp = sc.nextInt();
 
-		if (minUsado < minContrato) {
-			conta = plano;
+		System.out.println("Dinheiro recebido");
+		dinheiroRec = sc.nextDouble();
+
+		total = (double) precoUnd * qtComp;
+
+		if (total > dinheiroRec) {
+			troco = dinheiroRec - total;
+			System.out.printf("DINHEIRO INSUFICIENTE. FALTAM %.2f REAIS", Math.abs(troco));
 		}
 
 		else {
-			conta = (double) plano + ((minUsado - minContrato) * custoExtra);
 
+			troco = dinheiroRec - total;
+			System.out.printf("TROCO %.2f%n", troco);
 		}
-
-		System.out.printf("Valor a pagar: %.2f%n", conta);
 
 		sc.close();
 
