@@ -7,31 +7,35 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double precoUnd, dinheiroRec, troco, total;
-		int qtComp;
-
-		System.out.println("Preço unitário do produto:");
-		precoUnd = sc.nextDouble();
-
-		System.out.println("Quantidade comprada:");
-		qtComp = sc.nextInt();
-
-		System.out.println("Dinheiro recebido");
-		dinheiroRec = sc.nextDouble();
-
-		total = (double) precoUnd * qtComp;
-
-		if (total > dinheiroRec) {
-			troco = dinheiroRec - total;
-			System.out.printf("DINHEIRO INSUFICIENTE. FALTAM %.2f REAIS", Math.abs(troco));
+		String classificacao;
+		double nivel;
+		
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("Digite a medida da glicose:");
+		nivel = sc.nextDouble();
+		
+		if (nivel <= 90) {
+			classificacao = "Normal";
 		}
-
+		
+		else if (nivel <= 140) {
+				classificacao = "elevado";
+			}
+		
 		else {
-
-			troco = dinheiroRec - total;
-			System.out.printf("TROCO %.2f%n", troco);
+			classificacao = "diabetes";
 		}
 
+		
+		
+		
+		System.out.printf("Classificacao %s", classificacao );
 		sc.close();
 
 	}
