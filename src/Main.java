@@ -7,35 +7,36 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		String classificacao;
-		double nivel;
+		double a, b, c, maior;
 		
+		System.out.println("Digite as tres distancias:");
+        a = sc.nextDouble();
+        b = sc.nextDouble();
+        c = sc.nextDouble();
 		
-		
-		
-		
-		
-		
-		
-		System.out.println("Digite a medida da glicose:");
-		nivel = sc.nextDouble();
-		
-		if (nivel <= 90) {
-			classificacao = "Normal";
-		}
-		
-		else if (nivel <= 140) {
-				classificacao = "elevado";
-			}
-		
-		else {
-			classificacao = "diabetes";
-		}
+        maior = 0;
+        
+        
+        if (b > a && b > c) {
+        	maior = b;
+        }
+        
+         else  if (a > b && a > c) {
+        	 
+        	 maior = a;
 
+        }
+         else {
+        	 maior = c;
+         }
+        
+        
+        System.out.printf("MAIOR DISTANCIA = %.2f", maior);
 		
 		
 		
-		System.out.printf("Classificacao %s", classificacao );
+		
+	
 		sc.close();
 
 	}
