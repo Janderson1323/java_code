@@ -7,36 +7,35 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double a, b, c, maior;
-		
-		System.out.println("Digite as tres distancias:");
-        a = sc.nextDouble();
-        b = sc.nextDouble();
-        c = sc.nextDouble();
-		
-        maior = 0;
-        
-        
-        if (b > a && b > c) {
-        	maior = b;
-        }
-        
-         else  if (a > b && a > c) {
-        	 
-        	 maior = a;
+		double faren, celc;
+		char x;
 
-        }
-         else {
-        	 maior = c;
-         }
-        
-        
-        System.out.printf("MAIOR DISTANCIA = %.2f", maior);
+		System.out.println("Voce vai digitar a temperatura em qual escala (C/F)?");
+		x = sc.nextLine().charAt(0);
+
+		if (x == 'f') {
+
+			System.out.printf("Digite a temperatura em Fahrenheit ");
+			faren = sc.nextDouble();
+
+			celc =  5.0 / 9 * (faren - 32);
+			System.out.printf("Temperatura equivalente em Celsius %.2f", celc);
+
+		}
+		
+		else if (x == 'c') {
+			
+			System.out.printf("Digite a temperatura em Celsius ");
+			celc = sc.nextDouble();
+
+			faren = celc * 9 / 5.0  + 32.0;
+			System.out.printf("Temperatura equivalente em Fahrenheit %.2f", faren);
+			
+		}
+
 		
 		
-		
-		
-	
+
 		sc.close();
 
 	}
