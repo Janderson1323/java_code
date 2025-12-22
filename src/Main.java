@@ -7,29 +7,33 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		double a, b, c, x1, x2, delta;
+		int um, dois, tres, menor;
 
-		System.out.printf("Coeficiente a: ");
-		a = sc.nextDouble();
-		System.out.printf("Coeficiente b: ");
-		b = sc.nextDouble();
-		System.out.printf("Coeficiente c: ");
-		c = sc.nextDouble();
+		System.out.printf("Primeiro valor: ");
+		um = sc.nextInt();
 
-		delta = (b * b) - (4 * a * c);
+		System.out.println("Segundo valor: ");
+		dois = sc.nextInt();
 
-		x1 = ((-b) + Math.sqrt(delta)) / (2 * a);
-		x2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+		System.out.println("Terceiro valor:");
+		tres = sc.nextInt();
 
-		if (delta < 0) {
-			System.out.println("Esta equacao nao possui raizes reais");
+		menor = 0;
+
+		if (um < dois && um < tres) {
+			menor = um;
+		}
+
+		else if (dois > tres) {
+			menor = tres;
 		}
 
 		else {
-			System.out.printf("X1 %.4f%n", x1);
-			System.out.printf("X2 %.4f%n", x2);
-
+			menor = dois;
 		}
+		
+		
+		System.out.printf("MENOR = %d", menor);
 
 		sc.close();
 
