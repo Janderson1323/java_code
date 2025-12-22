@@ -1,31 +1,34 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+        
+        
+		double nota1, nota2, notaFinal;
 		
 		
 		
-	double duracao, min, seg, resto;
-	int horas;
-	System.out.println("Digite a duracao em segundos: ");
-	duracao = sc.nextInt();
-	
-	resto = duracao % 3600;
-	
-	horas = (int)duracao / 3600;
-	min = resto / 60;
-	seg = resto % 60;
-	
-	System.out.println(horas);
-	
-	System.out.println(min);
-	System.out.println(seg);
+		System.out.printf("Digite a primeira nota:");
+		nota1 = sc.nextDouble();
+		
+		System.out.printf("Digite a segunda nota:");
+		nota2 = sc.nextDouble();
+		
+		notaFinal = nota1 + nota2;
+		
+		if (notaFinal < 60) {
+			System.out.printf("NOTA FINAL = %.1f%n", notaFinal);
+			System.out.println("REPROVADO");
+		}
 
-	System.out.printf("%d horas %.0f minutos %.0f segundos %n", horas, min, seg);
-
-	sc.close();
+		else {
+			System.out.printf("NOTA FINAL = %.1f%n", notaFinal);
+		}
+		sc.close();
 
 	}
 
