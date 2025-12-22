@@ -7,33 +7,26 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int um, dois, tres, menor;
+		double plano, custoExtra, conta;
+		int minContrato, minUsado;
 
-		System.out.printf("Primeiro valor: ");
-		um = sc.nextInt();
+		custoExtra = 2.00;
+		plano = 50.00;
+		minContrato = 100;
 
-		System.out.println("Segundo valor: ");
-		dois = sc.nextInt();
+		System.out.printf("Digite a quantidade de minutos:");
+		minUsado = sc.nextInt();
 
-		System.out.println("Terceiro valor:");
-		tres = sc.nextInt();
-
-		menor = 0;
-
-		if (um < dois && um < tres) {
-			menor = um;
-		}
-
-		else if (dois > tres) {
-			menor = tres;
+		if (minUsado < minContrato) {
+			conta = plano;
 		}
 
 		else {
-			menor = dois;
+			conta = (double) plano + ((minUsado - minContrato) * custoExtra);
+
 		}
-		
-		
-		System.out.printf("MENOR = %d", menor);
+
+		System.out.printf("Valor a pagar: %.2f%n", conta);
 
 		sc.close();
 
