@@ -16,6 +16,10 @@ public class Main {
 		System.out.println("Aumento = R$ ");
 		System.out.println("Porcentagem = ");
 
+		
+		
+		porcentagem = 0;
+		
 		if (salario <= 1000) {
 			porcentagem = 20;
 			newSalary = salario + (salario * porcentagem / 100);
@@ -32,7 +36,7 @@ public class Main {
 		}
 
 		else {
-
+            porcentagem = 5;
 			newSalary = salario + (salario * 5 / 100);
 		}
 		
