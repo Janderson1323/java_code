@@ -5,35 +5,36 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		double n1, n2;
-		String status;
 
-		System.out.println("Digite dois numeros:");
-		n1 = sc.nextDouble();
-		n2 = sc.nextDouble();
+		double x, soma, media;
+		int i;
 
-		while (n1 != n2) {
+		System.out.println("Digite as idades: ");
+		x = sc.nextDouble();
+		
+
+		if (x < 0) {
 			
-			if (n1 > n2) {
-				status = "DECRESCENTE!";
-			}
-
-			else {
-				status = "CRESCENTE! ";
-			}
-			
-			if (n1 != n2) {
-				System.out.println(status);
-			}
-
-			System.out.println("Digite outros dois numeros: ");
-			n1 = sc.nextDouble();
-			n2 = sc.nextDouble();
-
-			
+			System.out.println("IMPOSSIVEL CALCULAR");
 		}
 
-		
+		else {
+			soma = 0;
+			i = 0;
+			
+			
+			
+			while (x >= 0) {
+				i++;
+				soma = soma + x;
+				x = sc.nextDouble();
+
+			}
+			
+			media = soma / i;
+			System.out.printf("MEDIA = %.2f%n", media);
+
+		}
 
 		
 
