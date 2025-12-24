@@ -7,35 +7,51 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
+		
+		double codigo, gas, alcool, diesel;
+		
 
-		double nota1, nota2, media;
-
-		System.out.println("Digite a primeira nota: ");
-		nota1 = sc.nextDouble();
-
-	
-
-		while (nota1 < 0 || nota1 > 10)
-		{
-			System.out.println("Valor invalido! Tente novamente:");
-			nota1 = sc.nextDouble();
+		System.out.println("Informe um codigo (1, 2, 3) ou 4 para parar:");
+		codigo = sc.nextDouble();
+		
+		
+		gas = 0;
+		alcool = 0;
+		diesel = 0;
+		while (codigo != 4) {
+			
+			
+			
+			System.out.println("Informe um codigo (1, 2, 3) ou 4 para parar:");
+			codigo = sc.nextInt();
+			
+			if (codigo == 1) {  
+				alcool += 1;
+			}
+			
+			else if (codigo == 2) {
+				gas += 1;
+			}
+			
+			else if (codigo == 3) {
+				diesel += 1;
+			}
+			
+			if (codigo == 4) {
+				System.out.println("MUITO OBRIGADO");
+				System.out.printf("Alcool %.2f%n", alcool);
+				System.out.printf("Gasolina %.2f%n", gas);
+				System.out.printf("Diesel %.2f%n", diesel);
+				
+			}
+			
+			
+			
+			
+			
 		}
-
 		
-		System.out.printf("Digite a segunda nota");
-		nota2 = sc.nextDouble();
 		
-
-		while (nota2 < 0 || nota2 > 10)
-		{
-			System.out.println("Valor invalido! Tente novamente:");
-			nota2 = sc.nextDouble();
-		}
-		
-
-		
-		media = (nota1 + nota2) / 2;
-		System.out.printf("MEDIA = %.2f%n", media);
 
 		sc.close();
 
