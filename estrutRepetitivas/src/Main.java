@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -5,38 +6,36 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		
 
-		System.out.println("Digite os valores das coordenadas X e Y:");
+		double nota1, nota2, media;
 
-		int x, y;
+		System.out.println("Digite a primeira nota: ");
+		nota1 = sc.nextDouble();
 
-		System.out.println("Digite os valores das coordenadas X e Y");
-		x = sc.nextInt();
-		y = sc.nextInt();
+	
 
-		while (x != 0 && y != 0) {
-			if (x > 0 && y > 0) {
-				System.out.println("QUADRANTE Q1");
-			}
-
-			else if (x < 0 && y > 0) {
-
-				System.out.println("QUADRANTE Q2");
-
-			}
-
-			else if (x < 0 && y < 0) {
-				System.out.println("QUADRANTE Q3");
-			}
-
-			else {
-				System.out.println("QUADRANTE Q4");
-			}
-
-			System.out.println("Digite os valores das coordenadas X e Y: ");
-			x = sc.nextInt();
-			y = sc.nextInt();
+		while (nota1 < 0 || nota1 > 10)
+		{
+			System.out.println("Valor invalido! Tente novamente:");
+			nota1 = sc.nextDouble();
 		}
+
+		
+		System.out.printf("Digite a segunda nota");
+		nota2 = sc.nextDouble();
+		
+
+		while (nota2 < 0 || nota2 > 10)
+		{
+			System.out.println("Valor invalido! Tente novamente:");
+			nota2 = sc.nextDouble();
+		}
+		
+
+		
+		media = (nota1 + nota2) / 2;
+		System.out.printf("MEDIA = %.2f%n", media);
 
 		sc.close();
 
