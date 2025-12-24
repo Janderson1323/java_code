@@ -6,17 +6,39 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		double senha;
+		System.out.println("Digite os valores das coordenadas X e Y:");
 
-		System.out.println("Digite a senha: ");
-		senha = sc.nextDouble();
-		
-		while (senha != 2002) {
-			System.out.printf("Senha Invalida! Tente novamente: ");
-			senha = sc.nextDouble();
+		int x, y;
+
+		System.out.println("Digite os valores das coordenadas X e Y");
+		x = sc.nextInt();
+		y = sc.nextInt();
+
+		while (x != 0 && y != 0) {
+			if (x > 0 && y > 0) {
+				System.out.println("QUADRANTE Q1");
+			}
+
+			else if (x < 0 && y > 0) {
+
+				System.out.println("QUADRANTE Q2");
+
+			}
+
+			else if (x < 0 && y < 0) {
+				System.out.println("QUADRANTE Q3");
+			}
+
+			else {
+				System.out.println("QUADRANTE Q4");
+			}
+
+			System.out.println("Digite os valores das coordenadas X e Y: ");
+			x = sc.nextInt();
+			y = sc.nextInt();
 		}
-		
-		System.out.println("Acesso permitido");
+
+		sc.close();
 
 	}
 
