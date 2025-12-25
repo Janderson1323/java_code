@@ -7,26 +7,23 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		double n, soma;
-		System.out.println("Digite um numero inteiro:");
-		n = sc.nextDouble();
-
-		while (n != 0) {
-			if (n % 2 == 0) {
-				soma = n + (n + 2) + (n + 4) + (n + 6) + (n + 8);
-			} else {
-				n += 1;
-				soma = n + (n + 2) + (n + 4) + (n + 6) + (n + 8);
-			}
-
-			System.out.printf("SOMA = %.2f%n", soma);
-			System.out.println("Digite um numero inteiro ");
-			n = sc.nextDouble();
-
+		
+		
+		double valor, soma;
+		int i;
+		
+		
+		System.out.println("Deseja a tabuada para qual valor? ");
+		valor = sc.nextDouble();
+		soma = 0;
+		for(  i = 1; i <= 10; i++ ) {
+			
+			soma = valor * i;
+			System.out.printf("%.2f X %d = %.2f%n",valor, i, soma);
+			
 		}
-
-		sc.close();
-
+		
+		
 	}
 
 }
